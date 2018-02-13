@@ -17,10 +17,7 @@ class User < ApplicationRecord
   validates :password, length: { minimum: 6, allow_nil: true }
 
   after_initialize :ensure_session_token
-
-  has_attached_file :image, default_url: "https://s3.amazonaws.com/pxco-dev/logo.jpg"
-  validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
-
+  
   attr_reader :password
 
   def self.find_by_credentials(username, password)
