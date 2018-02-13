@@ -1,14 +1,17 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
-import { AuthRoute, ProtectedRoute } from '../util/route_util';
+import { AuthRoute, ProtectedRoute } from '../util/routeUtil';
+import SessionFormContainer from './Session/SessionFormContainer';
+import RejectionIndexContainer from './Rejection/RejectionIndexContainer';
+import LandingContainer from './Landing/LandingContainer';
 
 const App = () => {
   return(
     <Switch>
-      <AuthRoute path='/login' component={} />
-      <AuthRoute path='/signup' component={} />
-      <ProtectedRoute path='/servers' component={} />
-      <Route exact path='/' component={}/>
+      <AuthRoute path='/login' component={SessionFormContainer} />
+      <AuthRoute path='/signup' component={SessionFormContainer} />
+      <ProtectedRoute path='/rejections' component={RejectionIndexContainer} />
+      <Route exact path='/' component={LandingContainer}/>
     </Switch>
   );
 };
