@@ -1,6 +1,6 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
-import { AuthRoute, ProtectedRoute } from '../util/routeUtil';
+import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import SessionFormContainer from './Session/SessionFormContainer';
 import RejectionIndexContainer from './Rejection/RejectionIndexContainer';
 import LandingContainer from './Landing/LandingContainer';
