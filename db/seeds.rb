@@ -5,6 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+User.destroy_all
 
 users = [
   ["alison", "password"],
@@ -12,6 +13,7 @@ users = [
   ["monica", "password"],
   ["dae", "password"],
   ["luke", "password"],
+  ["sunny", "password"]
 ]
 
 users.each do |name, password|
