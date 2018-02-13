@@ -1,10 +1,10 @@
 import React from 'react';
 
-export default class SessionForm extends React.Component{
+export default class Landing extends React.Component{
   render(){
     return(
       <section>
-        
+        Hi welcome to the landing page!
       </section>
     );
   }
