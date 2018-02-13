@@ -1,7 +1,6 @@
 class Api::UsersController < ApplicationController
   def index
     @users = User.all
-    render "api/users/index"
   end
 
   def create
@@ -15,15 +14,14 @@ class Api::UsersController < ApplicationController
     end
   end
 
-  # def show
-  #   @user = User.find(params[:id])
-  #   render :profile
-  # end
+  def show
+    @user = User.find(params[:id])
+  end
 
   def update
     @user = User.find(params[:id])
     if @user.update(user_params)
-      render :profile
+      render :show
     else
       render json: @user.errors.full_messages, status: 422
     end
