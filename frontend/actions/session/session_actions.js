@@ -1,4 +1,4 @@
-import * as SessionAPIUtil from "../util/session_api_util";
+import * as SessionAPIUtil from "../../util/session_api_util";
 
 export const RECEIVE_USER = "RECEIVE_USER";
 export const receiveUser = user => {
