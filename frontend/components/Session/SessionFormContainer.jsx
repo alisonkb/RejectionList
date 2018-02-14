@@ -1,16 +1,12 @@
-import { connect } from 'react-redux';
-import SessionForm from './SessionForm';
+import { connect } from "react-redux";
+import SessionForm from "./SessionForm";
 
 const mapStateToProps = (state, ownProps) => {
-  return {
-
-  };
+  return {};
 };
 
 const mapDispatchToProps = dispatch => {
-  return {
-
-  };
+  return {};
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(SessionForm);

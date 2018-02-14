@@ -1,23 +1,23 @@
-import React from 'react';
+import React from "react";
 
 export default class SessionForm extends React.Component {
-  constructor() {
+  constructor(props) {
     super(props);
-    this.state = {username: '', password: ''};
+    this.state = { username: "", password: "" };
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleSubmit(type) {
-    return (e) => {
+    return e => {
       e.preventDefault();
       this.props.submit(this.state);
     };
   }
 
-  handleUpdate(type){
-    return (e) => {
+  handleUpdate(type) {
+    return e => {
       e.preventDefault();
-      this.setState({type: e.target.value});
+      this.setState({ type: e.target.value });
     };
   }
 
@@ -25,8 +25,8 @@ export default class SessionForm extends React.Component {
     return (
       <section>
         <form onSubmit={this.handleSubmit(this.props.type)}>
-          <input onChange={this.handleUpdate('username')}/>
-          <input onChange={this.handleUpdate('password')}/>
+          <input onChange={this.handleUpdate("username")} />
+          <input onChange={this.handleUpdate("password")} />
           <button>{this.props.type}</button>
         </form>
       </section>
