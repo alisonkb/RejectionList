@@ -1,9 +1,9 @@
 import { connect } from 'react-redux';
 import SessionForm from './SessionForm';
 
-const mapStateToProps = state => {
+const mapStateToProps = (state, ownProps) => {
   return {
-    
+
   };
 };
 
